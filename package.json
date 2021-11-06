@@ -1,0 +1,29 @@
+{
+  "name": "dankweather",
+  "version": "1.5.0",
+  "description": "Simple Weather App powered by Open Weather Map",
+  "main": "server.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshholly/dankweather.git"
+  },
+  "author": "Josh Holly (wafflehacker)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshholly/dankweather/issues"
+  },
+  "homepage": "https://github.com/joshholly/dankweather#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "config": "^3.3.6",
+    "config.json": "0.0.4",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.14"
+  }
+}
