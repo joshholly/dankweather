@@ -3,6 +3,9 @@ Dank Weather is a very simple weather web app that uses nodeJS to use do an API 
 
 This weather app allows you to get a user's weather based on their current location (if permission is granted to the website), or they can specify a location. The Google Maps / Places / Geocode allows gets longitude or latitude from user's location, or from user input. It is then sent to the OpenWeatherMap API to display the weather.
 
+## Live Version ##
+https://dankweather.com/
+
 **Prerequisites:**
 - NodeJS
 - Google API key with Maps Javascript API, Places API, and Geocode API

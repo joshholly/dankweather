@@ -47,7 +47,7 @@ function setWeatherData(data, place) {
   feelslikeElement.textContent = Math.round(data.main.feels_like) + "°  F";
   windElement.textContent = Math.round(data.wind.speed) + " MPH";
   iconElement.innerHTML =
-    '<img src="http://openweathermap.org/img/wn/' +
+    '<img src="https://openweathermap.org/img/wn/' +
     data.weather[0].icon +
     '@2x.png">';
 }
@@ -84,12 +84,15 @@ function grabLocation(pos) {
     .then((res) => res.json())
     .then((data) => {
       setWeatherData(data);
+      console.log(crd.latitude);
+      console.log(crd.longitude);
       getReverseGeocodingData(crd.latitude, crd.longitude);
     });
 }
 
 //Function to get address from user's current location
 function getReverseGeocodingData(lat, lng) {
+
   var latlng = new google.maps.LatLng(lat, lng);
   // This is making the Geocode request
   var geocoder = new google.maps.Geocoder();
@@ -100,7 +103,7 @@ function getReverseGeocodingData(lat, lng) {
     function (results, status) {
       // This is checking to see if the Geoeode Status is OK before proceeding
       if (status == google.maps.GeocoderStatus.OK) {
-        locationElement.textContent = results[7].formatted_address;
+        locationElement.textContent = results[6].formatted_address;
         //searchElement.value = results[7].formatted_address;
       }
     }
